@@ -1,0 +1,21 @@
+{
+	"name": "Stock",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "meanmachine's First App",
+
+	"content_scripts": [
+	    {
+	      "matches": ["http://*/*"],
+	      "js": ["files/jquery-2.1.3.js", "files/HandleClick.js"]
+	    }
+  	],
+
+
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "It does stuff!",
+		"default_popup": "files/index.html"
+	},
+	"permissions" : ["notifications", "tabs", "webRequest"]
+}
